@@ -13,8 +13,11 @@
    import NotFound from '@/components/error.vue';
 
    // default props available on error.vue
-   const props = defineProps({
-      error: Object,
+   defineProps({
+      error: {
+         type: Object,
+         default: () => ({}),
+      },
    });
 
    // clear error and redirect to home page

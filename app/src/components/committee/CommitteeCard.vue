@@ -68,7 +68,7 @@
       img: {
          type: String,
          default: 'https://api.serveriry.fi/assets/3e47b669-5e97-4a9d-b48e-f3161e669551',
-         required: true,
+         required: false,
       },
       hover_img: {
          type: String,

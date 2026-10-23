@@ -14,17 +14,17 @@
       name: {
          type: String,
          default: 'Default Title',
-         required: true,
+         required: false,
       },
       link: {
          type: String,
          default: 'fab instagram',
-         required: true,
+         required: false,
       },
       icon: {
          type: String,
          default: '#event',
-         required: true,
+         required: false,
       },
    });
 </script>

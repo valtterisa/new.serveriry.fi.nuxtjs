@@ -18,7 +18,7 @@
       const { data } = (await useFetch(`${config.public['API_URL']}items/serveri_rules`)) as { data: Data };
       rules = data.value.data;
       updated = new Date(rules.date_updated);
-   } catch (e) {
+   } catch {
       rules = {
          rules_fi: 'Säännöt ovat kadonneet. Viva la revolucion!',
          rules_en: 'Rules are missing. Viva la revolucion!',
@@ -29,6 +29,7 @@
 
 <style>
    @reference "tailwindcss";
+
    p {
       @apply tracking-wide;
    }

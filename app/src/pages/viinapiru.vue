@@ -2,7 +2,7 @@
    <div class="audio-player-container">
       <h1 class="header-text pt-4 text-white">Serveri ❤️ Viinapiru</h1>
       <div class="audio-player">
-         <button @click="togglePlay" class="play-pause-btn">
+         <button class="play-pause-btn" @click="togglePlay">
             <span v-if="!isPlaying">▶️</span>
             <span v-else>⏸️</span>
          </button>
@@ -100,6 +100,7 @@
 
 <style scoped>
    @reference "tailwindcss";
+
    .audio-player-container {
       display: flex;
       flex-direction: column;
@@ -115,7 +116,7 @@
    .header-text {
       font-size: 2rem;
       margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
    }
 
    .audio-player {
@@ -124,10 +125,10 @@
       gap: 1rem;
       width: 90%;
       max-width: 400px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgb(255 255 255 / 20%);
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
    }
 
    .play-pause-btn {
@@ -146,7 +147,7 @@
    .progress-container {
       flex: 1;
       height: 8px;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgb(255 255 255 / 30%);
       border-radius: 4px;
       position: relative;
       cursor: pointer;
@@ -163,10 +164,10 @@
    .time {
       font-size: 0.9rem;
       color: #fff;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
    }
 
-   @media (max-width: 600px) {
+   @media (width <= 600px) {
       .header-text {
          font-size: 1.5rem;
       }

@@ -31,12 +31,12 @@
       en_otsikko: {
          type: String,
          default: 'API Error: Title comes here maybee??',
-         required: true,
+         required: false,
       },
       fi_otsikko: {
          type: String,
          default: 'API Error: Title comes here maybee??',
-         required: true,
+         required: false,
       },
       alku_aika: {
          type: String,
@@ -45,7 +45,7 @@
       link: {
          type: Number,
          default: 1,
-         required: true,
+         required: false,
       },
    });
    const alku_aika = new Date(event.alku_aika);

@@ -69,13 +69,17 @@
 
 <style>
    @reference "tailwindcss";
+
    @config '../../../../tailwind.config.js';
+
    .nav-link {
       @apply flex items-center justify-between font-medium text-sm lg:text-lg md:font-bold uppercase whitespace-nowrap tracking-wide;
    }
+
    /* underline effect */
-   .nav-link:after {
+   .nav-link::after {
       @apply bg-custom-primary;
+
       content: '';
       position: absolute;
       width: 100%;
@@ -89,15 +93,18 @@
 
    .nav-dropdown-link {
       @apply flex items-center px-4 py-2 text-sm tracking-wider;
+
       border-bottom: 0.2em transparent solid;
-      padding: 0.5rem 0 0 0;
+      padding: 0.5rem 0 0;
       width: 100%;
       height: 3rem;
       letter-spacing: 0.025em;
    }
+
    /* underline effect */
    .nav-link-parent:hover .nav-dropdown-link {
       @apply border-b-custom-primary;
+
       transition: border-bottom-color 0.5s ease-out;
    }
 </style>

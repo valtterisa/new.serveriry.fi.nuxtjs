@@ -116,6 +116,7 @@
    .cls-1 {
       fill: transparent;
    }
+
    .cls-2 {
       fill-rule: evenodd;
    }

@@ -46,7 +46,9 @@
          const val = isDark.value ? 'dark' : 'light';
          try {
             localStorage.setItem('color-scheme', val);
-         } catch {}
+         } catch {
+            // Ignore storage errors
+         }
          document.cookie = `color-scheme=${val}; expires=${expires}; path=/;`;
       }
    }

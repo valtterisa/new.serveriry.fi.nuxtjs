@@ -8,7 +8,19 @@ import tsParser from '@typescript-eslint/parser';
 
 export default [
    {
-      ignores: ['.nuxt/**', '.output/**', 'dist/**', 'node_modules/**', 'coverage/**', '.github/**'],
+      ignores: [
+         '.nuxt/**',
+         '**/.nuxt/**',
+         '.output/**',
+         '**/.output/**',
+         'dist/**',
+         'node_modules/**',
+         'node-compile-cache/**',
+         'playwright-report/**',
+         'test-results/**',
+         'coverage/**',
+         '.github/**',
+      ],
    },
    js.configs.recommended,
    ...pluginVue.configs['flat/recommended'],

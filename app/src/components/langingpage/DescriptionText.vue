@@ -9,13 +9,13 @@
       en_description: {
          type: String,
          default: 'Why are the servers so hot? Because no one can resist white overalls! BTW API does not respond.',
-         required: true,
+         required: false,
       },
       fi_description: {
          type: String,
          default:
             'Miksi serverit on niin kuumia? Koska kukaan ei voi vastustaa valkoisia haalareita! API ei muuten vastaa.',
-         required: true,
+         required: false,
       },
    });
 </script>

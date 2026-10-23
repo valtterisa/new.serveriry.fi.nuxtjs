@@ -21,17 +21,17 @@
          type: String,
          default:
             '# Turvallisemman tilan periaatteet\n\n ## Sääntöjen löytämisessä ongelmia, serverit liekeissä?\n\nyritä uudelleen myöhemmin',
-         required: true,
+         required: false,
       },
       safe_space_en: {
          type: String,
          default: '# Consepts of Safer Space\n\n## Error finding rules, servers on fire?\n\ntry again later',
-         required: true,
+         required: false,
       },
       updated_at: {
          type: Date,
          default: new Date('01/01/1970'),
-         required: true,
+         required: false,
       },
    });
 </script>

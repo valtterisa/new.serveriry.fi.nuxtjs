@@ -21,17 +21,17 @@
          type: String,
          default:
             '# Serveri ry:n järjestyssäännöt\n\n## Sääntöjen löytämisessä ongelmia, serverit liekeissä?\n\nyritä uudelleen myöhemmin',
-         required: true,
+         required: false,
       },
       rules_en: {
          type: String,
          default: "# Serveri ry's rules of order\n\n## Error finding rules, servers on fire?\n\ntry again later",
-         required: true,
+         required: false,
       },
       updated_at: {
          type: Date,
          default: new Date('01/01/1970'),
-         required: true,
+         required: false,
       },
    });
 </script>

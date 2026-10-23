@@ -22,7 +22,7 @@
       const { data } = (await useFetch(`${config.public['API_URL']}items/turvallinen_tila`)) as { data: Data };
       rules = data.value.data;
       updated = new Date(rules.date_updated);
-   } catch (e) {
+   } catch {
       rules = {
          turvallinen_tila_fi: 'Säännöt ovat kadonneet. Viva la revolucion!',
          turvalinen_tila_en: 'Rules are missing. Viva la revolucion!',
@@ -33,6 +33,7 @@
 
 <style>
    @reference "tailwindcss";
+
    p {
       @apply tracking-wide;
    }

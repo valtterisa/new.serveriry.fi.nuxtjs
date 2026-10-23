@@ -40,12 +40,11 @@
    import type { Data } from '@/types';
    const config = useRuntimeConfig();
 
-   let companies;
-   let kuopio: string[];
-   let finland: string[];
+   let kuopio: string[] = [];
+   let finland: string[] = [];
    try {
       const { data } = (await useFetch(`${config.public['API_URL']}items/it_comppanies`)) as { data: Data };
-      companies = data.value.data;
+      const companies = data.value.data;
       // format data to array and remove dashes and sort alphabetically
       kuopio = companies.kuopio
          .split('\n')
@@ -55,16 +54,15 @@
          .split('\n')
          .map((item: string) => item.replace('- ', ''))
          .sort();
-   } catch (e) {
-      companies = {
-         kuopio: 'loading companies failed',
-         finland: 'loading companies failed',
-      };
+   } catch {
+      kuopio = ['loading companies failed'];
+      finland = ['loading companies failed'];
    }
 </script>
 
 <style scoped>
    @reference "tailwindcss";
+
    h2 {
       font-size: x-large;
       padding: 1rem 0;
@@ -73,6 +71,7 @@
    li {
       flex: 1 0 20%;
       margin: 5px 30px;
+
       @apply dark:text-white;
    }
 </style>
